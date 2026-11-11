@@ -119,6 +119,17 @@ h1 span{display:block}
 .pf h3{font:400 clamp(3.5rem,11vw,9.5rem)/.88 var(--anton);text-transform:uppercase}
 .pf .sub{font:400 clamp(1.8rem,4vw,3rem)/1.1 var(--shri);color:var(--verm);margin:12px 0 30px;transform:rotate(-2deg)}
 
+.more{padding:clamp(72px,10vw,110px) 28px}
+.more h2{font:400 clamp(2.6rem,8vw,6rem)/.9 var(--anton);text-transform:uppercase;margin-bottom:40px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{display:flex;flex-direction:column;gap:12px;background:var(--c);color:var(--t);padding:28px;min-height:340px;text-decoration:none;transition:transform .2s}
+.card:hover{transform:translateY(-6px)}
+.card h3{font:400 2.2rem/.95 var(--anton);text-transform:uppercase}
+.card p{margin:0}
+.card .tags{color:inherit;opacity:.85}
+.card .link{margin-top:auto;align-self:flex-start;border-bottom-color:currentColor}
+.card .link:hover{background:none}
+
 /* about */
 .pg2{background:var(--ink);color:var(--cream)}
 .pg2 h2{font:400 clamp(4rem,15vw,13rem)/.85 var(--anton);text-transform:uppercase}
@@ -160,7 +171,7 @@ footer{background:var(--ink);color:var(--cream);padding:22px 28px 30px;font-size
   .hero{padding:90px 20px 70px}.disc{width:240px;height:240px;top:-70px;right:-70px}.vm{display:none}
   .l2{margin-left:8%}.note-hero{margin:24px 0 0}
   .poster{padding-left:20px;padding-right:20px}
-  .row,.pd .row,.pf .in,.abt,.contact,.pr .in{grid-template-columns:1fr}
+  .row,.pd .row,.pf .in,.abt,.contact,.pr .in,.cards{grid-template-columns:1fr}
   .pd .in{grid-template-columns:1fr;gap:24px}.sign{grid-auto-flow:column;justify-content:start}.sign b{width:60px;height:60px;font-size:2.2rem}
   .blue{padding:80px 20px 40px}.blue .slot{margin-right:0}
   .pol{width:min(250px,80%)}
@@ -194,7 +205,7 @@ footer{background:var(--ink);color:var(--cream);padding:22px 28px 30px;font-size
     <p class="edition" aria-hidden="true">Portfolio, Edition 11.26</p>
     <span class="vm vr" aria-hidden="true">UX/UI design portfolio</span>
     <span class="vm vb" aria-hidden="true">Nyla Blitz 2026</span>
-    <h1><span class="l1">Artistic</span><span class="l2">Vision,</span><span class="l3">Perfectly Crafted</span></h1>
+    <h1><span class="l1">Artistic</span><span class="l2">Vision,</span><span class="l3">Captured Perfectly</span></h1>
     <div class="nw note-hero"><div class="note">
       <p>Nyla Blitz is a digital design student specializing in human-centered prototyping and content creation, with hands-on experience creating assistive technology solutions adopted by real users. Skilled in Figma, Adobe Creative Suite, and CAD tools, with a track record of leading interdisciplinary creative and technical teams.</p>
       <a class="btn" href="#work">View portfolio</a>
@@ -289,6 +300,15 @@ footer{background:var(--ink);color:var(--cream);padding:22px 28px 30px;font-size
       </div></div>
     </div>
   </div></article>
+
+  <section class="more" id="more"><div class="in">
+    <h2>More design work</h2>
+    <div class="cards">
+      <a class="card" style="--c:var(--cobalt);--t:var(--cream)" href="case-project-1.html"><h3>Project Title One</h3><p>Add a one or two sentence summary of this project here.</p><p class="tags">Add tags, like research, prototyping, branding</p><span class="link">View case study</span></a>
+      <a class="card" style="--c:var(--teal);--t:var(--cream)" href="case-project-2.html"><h3>Project Title Two</h3><p>Add a one or two sentence summary of this project here.</p><p class="tags">Add tags, like research, prototyping, branding</p><span class="link">View case study</span></a>
+      <a class="card" style="--c:var(--hot);--t:var(--ink)" href="case-project-3.html"><h3>Project Title Three</h3><p>Add a one or two sentence summary of this project here.</p><p class="tags">Add tags, like research, prototyping, branding</p><span class="link">View case study</span></a>
+    </div>
+  </div></section>
 
   <section class="poster pg2" id="about"><div class="in">
     <h2>About</h2>
