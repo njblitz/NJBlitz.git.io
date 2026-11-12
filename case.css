@@ -14,8 +14,10 @@ header nav a{font:400 1.05rem var(--anton);letter-spacing:.1em;text-transform:up
 header nav a:hover{background:var(--marigold)}
 .in{max-width:1100px;margin:0 auto;padding:0 28px}
 .chero{background:var(--c);color:var(--t);padding:64px 0 80px;overflow:hidden}
-.back{font:600 .9rem var(--sans);letter-spacing:.04em;text-underline-offset:4px}
-.chero h1{font:400 clamp(3.6rem,13vw,10rem)/.88 var(--anton);text-transform:uppercase;margin:30px 0 16px}
+.back{display:inline-block;position:relative;z-index:3;font:600 .9rem var(--sans);letter-spacing:.04em;text-decoration:none;padding:10px 20px;border:2px solid currentColor;border-radius:999px;transition:background .15s,color .15s}
+.back:hover,.back:focus-visible{background:var(--t);color:var(--c)}
+.chero h1,.chero .sub{position:relative;pointer-events:none}
+.chero h1{font:400 clamp(3.6rem,13vw,10rem)/.88 var(--anton);text-transform:uppercase;margin:40px 0 16px}
 .chero .sub{font:400 clamp(1.5rem,3.4vw,2.6rem)/1.15 var(--shri);margin:0;transform:rotate(-1.5deg);transform-origin:left;text-shadow:3px 3px 0 rgba(0,0,0,.22)}
 .meta{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding-top:40px;padding-bottom:16px;margin:0}
 .meta dt{font:600 .78rem var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
