@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nyla Blitz, UX/UI Designer</title>
+<meta name="description" content="Portfolio of Nyla Blitz, a digital design student specializing in human-centered prototyping and content creation.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230B7C86'/%3E%3Ccircle cx='50' cy='58' r='28' fill='%23FFB04A'/%3E%3Crect y='58' width='100' height='42' fill='%230B7C86'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Shrikhand&family=Archivo:wght@400;600;800&family=Permanent+Marker&family=Fraunces:ital,opsz,wght@1,9..144,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FBF1DC;--ink:#231B14;--teal:#0B7C86;--cobalt:#1B6FE8;--hot:#FFB04A;--marigold:#F5B93A;--orange:#F2792B;--verm:#E0412C;--olive:#7A7D52;--mint:#BFE6D4;--brown:#5A2E1B;
+  --ext:1px 1px 0 #9C4A17,2px 2px 0 #9C4A17,3px 3px 0 #9C4A17,4px 4px 0 #9C4A17,5px 5px 0 #9C4A17,6px 6px 0 #9C4A17,7px 7px 0 #9C4A17,8px 8px 0 #9C4A17;
+  --exti:1px 1px 0 #231B14,2px 2px 0 #231B14,3px 3px 0 #231B14,4px 4px 0 #231B14,5px 5px 0 #231B14,6px 6px 0 #231B14;
+  --torn:polygon(0 3%,4% 0,9% 3%,15% 1%,22% 4%,30% 0,38% 3%,46% 1%,55% 4%,63% 0,72% 3%,80% 1%,88% 4%,95% 0,100% 3%,100% 97%,94% 100%,86% 96%,78% 100%,69% 97%,60% 100%,51% 96%,42% 100%,33% 97%,24% 100%,15% 96%,7% 100%,0 97%);
+  --anton:"Anton",Impact,"Arial Narrow",sans-serif;--shri:"Shrikhand",Georgia,serif;--sans:"Archivo","Helvetica Neue",Arial,sans-serif;--mark:"Permanent Marker",cursive;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
+body{margin:0;background:var(--cream);color:var(--ink);font:400 1.0625rem/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:clip}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:60;mix-blend-mode:multiply;opacity:.5;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .15 0 0 0 0 .1 0 0 0 0 .05 0 0 0 .22 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+a{color:inherit}
+a:focus-visible,input:focus-visible,textarea:focus-visible,button:focus-visible{outline:3px solid var(--cobalt);outline-offset:3px}
+h1,h2,h3{margin:0;font-weight:400}
+p{margin:0 0 1em}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+header.top{position:sticky;top:0;z-index:40;background:var(--cream);border-bottom:2px solid var(--ink);display:flex;align-items:center;justify-content:space-between;padding:0 28px;height:62px}
+.logo{font:400 1.5rem var(--shri);text-decoration:none;color:var(--ink)}
+nav{display:flex;gap:6px}
+nav a{font:400 1.05rem var(--anton);letter-spacing:.1em;text-transform:uppercase;text-decoration:none;padding:6px 12px}
+nav a:hover{background:var(--marigold)}
+
+.btn{display:inline-block;background:var(--ink);color:var(--cream);font:400 1.15rem var(--anton);letter-spacing:.08em;text-transform:uppercase;padding:12px 28px;text-decoration:none;border:0;cursor:pointer;transform:rotate(-2deg);transition:background .15s}
+.btn:hover{background:var(--verm)}
+.sea{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+.vm{position:absolute;z-index:1;writing-mode:vertical-rl;font:600 .75rem var(--sans);letter-spacing:.35em;text-transform:uppercase;color:var(--cream)}
+.vr{right:18px;top:50%;transform:translateY(-50%)}.vb{left:18px;bottom:28px;transform:rotate(180deg)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;color:var(--cream);min-height:max(calc(100svh - 62px),760px);padding:96px 28px 90px;display:flex;flex-direction:column;justify-content:center;background:var(--teal)}
+.disc{position:absolute;z-index:1;top:-110px;right:-110px;width:400px;height:400px;border-radius:50%;background:repeating-conic-gradient(var(--marigold) 0 6deg,var(--orange) 6deg 12deg);animation:spin 80s linear infinite}
+.disc::after{content:"";position:absolute;inset:32%;border-radius:50%;background:var(--cream)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.edition{position:absolute;z-index:2;top:30px;left:28px;margin:0;font:400 1.3rem var(--mark);transform:rotate(-4deg)}
+h1{position:relative;z-index:2;max-width:1180px;width:100%;margin:0 auto;text-transform:uppercase}
+h1 span{display:block}
+.l1{font:400 clamp(4.4rem,17vw,15rem)/.84 var(--anton);transform:rotate(-4deg);text-shadow:5px 5px 0 rgba(4,50,58,.4)}
+.l2{font:400 clamp(3.2rem,12vw,10.5rem)/1 var(--shri);text-transform:none;color:var(--hot);text-shadow:var(--ext);margin:-.12em 0 0 18%;transform:rotate(3deg)}
+.l3{font:400 clamp(2rem,7vw,6rem)/1 var(--anton);margin:.12em 0 0 5%;transform:rotate(-2deg);text-shadow:4px 4px 0 rgba(4,50,58,.4)}
+.note-hero{position:relative;z-index:2;width:min(470px,100%);margin:-10px 4% 0 auto}
+.nw{filter:drop-shadow(0 14px 12px rgba(20,12,6,.3));transform:rotate(var(--rot,-1.5deg))}
+.note{background:var(--cream);color:var(--ink);padding:36px 34px 38px;clip-path:var(--torn)}
+.note p:last-child{margin-bottom:0}
+
+/* ticker */
+.ticker{position:relative;z-index:5;background:var(--marigold);color:var(--ink);overflow:hidden;transform:rotate(-1.6deg) scale(1.04);margin:-26px 0;padding:8px 0;border-block:2px solid var(--ink)}
+.track{display:flex;width:max-content;animation:tick 30s linear infinite;font:400 2rem var(--anton);letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+.track span{padding-right:.6em}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* shared poster parts */
+.poster{position:relative;overflow:hidden;padding:clamp(72px,10vw,130px) 28px}
+.in{position:relative;z-index:1;max-width:1180px;margin:0 auto}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-top:44px}
+.slot{margin:0;position:relative;background:#26201A radial-gradient(rgba(255,255,255,.12) 1.2px,transparent 1.7px) 0 0/10px 10px;aspect-ratio:4/5;display:flex;align-items:flex-end;padding:16px;color:#d9d1c1;font-size:.85rem;line-height:1.3;box-shadow:0 26px 30px -18px rgba(0,0,0,.65);transform:rotate(var(--rot,3deg));transition:transform .3s;max-width:420px;width:100%;justify-self:center}
+.slot:hover{transform:rotate(0) scale(1.02)}
+.slot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tags{font:400 1.1rem/1.3 var(--mark);color:var(--verm)}
+.link{display:inline-block;font:400 1.1rem var(--anton);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border-bottom:3px solid var(--ink)}
+.link:hover{background:var(--marigold)}
+
+/* A: magazine cover */
+.pa .big{display:block;font:400 clamp(3.4rem,13vw,11rem)/.88 var(--anton);text-transform:uppercase;color:var(--cobalt)}
+.pa .scr{display:block;position:relative;z-index:3;font:400 clamp(3rem,11vw,9.5rem)/1 var(--shri);color:var(--marigold);text-shadow:var(--exti);margin:-.3em 0 0 14%;transform:rotate(-4deg)}
+.pa .mast{position:absolute;right:0;top:6px;margin:0;font:600 .85rem var(--sans);letter-spacing:.4em;text-transform:uppercase}
+.pa .row{margin-top:-40px}
+.blue{background:var(--cobalt);padding:96px 40px 56px;display:flex;justify-content:center}
+.blue .slot{margin-right:-70px}
+
+/* B: flat three-color poster */
+.pb{background:#EDEBC8}
+.dbl{display:grid;font:400 clamp(5rem,21vw,18rem)/.82 var(--anton);text-transform:uppercase;letter-spacing:-.01em}
+.dbl span{grid-area:1/1}
+.dbl .base{color:#1AA39A}
+.dbl .over{color:var(--verm);clip-path:polygon(0 52%,100% 20%,100% 58%,0 94%)}
+.pb .slot{background-color:var(--olive)}
+
+/* C: sea */
+.pc{background:var(--teal);color:var(--cream)}
+.pc h3{font:400 clamp(3rem,10vw,8.5rem)/1.02 var(--shri);color:var(--hot);text-shadow:var(--ext);transform:rotate(-3deg)}
+
+/* D: signage + sunburst */
+.pd{background:repeating-conic-gradient(from 0deg at 50% 100%,#F7C75A 0 7deg,#F2A93A 7deg 14deg)}
+.pd .in{display:grid;grid-template-columns:96px 1fr;gap:40px}
+.sign{display:grid;gap:8px;align-content:start;transform:rotate(-3deg)}
+.sign b{display:grid;place-items:center;width:84px;height:84px;background:var(--orange);color:var(--cream);font:400 3rem var(--anton);border:4px solid var(--cream);box-shadow:5px 5px 0 var(--brown)}
+.pd h3{font:400 clamp(2.6rem,8vw,7rem)/1.02 var(--shri);color:var(--brown);text-shadow:3px 4px 0 var(--cream)}
+.pd .row{grid-template-columns:1fr 1fr}
+
+/* E: polaroids */
+.pe{background:var(--orange)}
+.pe h3{font:400 clamp(4rem,14vw,12rem)/.86 var(--anton);text-transform:uppercase}
+.polys{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;margin:52px 0 40px}
+.pol{margin:0;background:#fff;padding:14px 14px 0;width:min(260px,42%);box-shadow:0 22px 28px -14px rgba(0,0,0,.5);transform:rotate(var(--r))}
+.ph{aspect-ratio:4/5;background:#26201A radial-gradient(rgba(255,255,255,.12) 1.2px,transparent 1.7px) 0 0/10px 10px;display:flex;align-items:flex-end;padding:12px;color:#d9d1c1;font-size:.8rem;line-height:1.3}
+.pol figcaption{font:400 1.9rem/1.1 var(--mark);padding:12px 0 14px;text-align:center}
+.pe .nw{max-width:520px;margin:0 auto}
+
+/* F: retro radio dial */
+.pf{background:var(--mint)}
+.pf .in{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+.dial{position:relative;width:min(100%,420px);aspect-ratio:1;border-radius:50%;border:14px solid #5FB594;justify-self:center;background:radial-gradient(circle,var(--ink) 0 5%,transparent 5.5%),radial-gradient(circle,#F4EBC8 0 22%,#D6CB86 22.5% 26%,transparent 26.5%),repeating-conic-gradient(var(--ink) 0 1.2deg,transparent 1.2deg 7deg),#EFE7C8}
+.dial::after{content:"";position:absolute;left:50%;top:50%;width:44%;height:5px;background:var(--verm);transform-origin:0 50%;transform:rotate(-32deg)}
+.pf h3{font:400 clamp(3.5rem,11vw,9.5rem)/.88 var(--anton);text-transform:uppercase}
+.pf .sub{font:400 clamp(1.8rem,4vw,3rem)/1.1 var(--shri);color:var(--verm);margin:12px 0 30px;transform:rotate(-2deg)}
+
+/* about */
+.pg2{background:var(--ink);color:var(--cream)}
+.pg2 h2{font:400 clamp(4rem,15vw,13rem)/.85 var(--anton);text-transform:uppercase}
+.abt{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;margin-top:36px;align-items:start}
+.abt p{font-size:1.3rem;line-height:1.5;max-width:34ch}
+.scraps{display:grid;gap:18px}
+.scrap{padding:16px 22px;color:var(--ink);transform:rotate(var(--r))}
+.scrap:nth-child(1){--r:-2deg;background:var(--marigold)}.scrap:nth-child(2){--r:1.5deg;background:var(--mint)}
+.scrap:nth-child(3){--r:-1deg;background:var(--hot)}.scrap:nth-child(4){--r:2deg;background:#F3A190}
+.scrap b{display:block;font:400 1.6rem var(--anton);letter-spacing:.05em;text-transform:uppercase}
+
+/* resume */
+.pr{background:var(--cobalt);color:var(--cream)}
+.pr .in{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.pr h2{font:400 clamp(4rem,14vw,12rem)/.85 var(--anton);text-transform:uppercase}
+.pr p{font:italic 400 clamp(1.4rem,2.4vw,1.9rem)/1.3 "Fraunces",Georgia,serif;max-width:20ch;margin:28px 0 32px}
+.pr .btn{background:var(--marigold);color:var(--ink)}
+.pr .btn:hover{background:var(--cream)}
+.sheet{background:#fff;color:var(--ink);padding:34px 30px;width:100%;max-width:380px;aspect-ratio:8.5/11;justify-self:center;box-shadow:0 30px 34px -18px rgba(0,0,0,.6);transform:rotate(-3deg)}
+.sheet .nm{font:400 1.7rem var(--shri);margin:0 0 6px;max-width:none;color:var(--ink)}
+.sheet i{display:block;height:7px;background:#DDD7CA;margin:9px 0}
+.sheet b{display:block;font:400 1rem var(--anton);letter-spacing:.1em;text-transform:uppercase;margin-top:22px;border-bottom:2px solid var(--ink);padding-bottom:3px}
+
+/* contact */
+.pg{background:var(--teal);color:var(--cream)}
+.pg h2{font:400 clamp(3.4rem,12vw,10rem)/.9 var(--anton);text-transform:uppercase}
+.pg h2 em{display:block;font:400 1.02em/1.1 var(--shri);text-transform:none;font-style:normal;color:var(--hot);text-shadow:var(--ext);transform:rotate(-3deg);margin-top:.05em}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.contact .lead{font:italic 400 clamp(1.5rem,2.6vw,2rem)/1.3 "Fraunces",Georgia,serif;letter-spacing:-.01em;max-width:22ch;margin:44px 0 0}
+form .row2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+label{display:block;font-size:.9rem;font-weight:600;margin-bottom:2px}
+input,textarea{width:100%;background:transparent;border:0;border-bottom:2px solid var(--ink);color:var(--ink);font:400 1.05rem var(--sans);padding:10px 0 8px;margin-bottom:22px;border-radius:0}
+form .btn{width:100%;background:var(--orange);color:var(--ink)}
+form .btn:hover{background:var(--hot)}
+footer{background:var(--ink);color:var(--cream);padding:22px 28px 30px;font-size:.9rem}
+
+@media (max-width:860px){
+  header.top{padding:0 18px}nav a.hide-sm{display:none}nav a{padding:6px 8px;font-size:.95rem}
+  .hero{padding:90px 20px 70px}.disc{width:240px;height:240px;top:-70px;right:-70px}.vm{display:none}
+  .l2{margin-left:8%}.note-hero{margin:24px 0 0}
+  .poster{padding-left:20px;padding-right:20px}
+  .row,.pd .row,.pf .in,.abt,.contact,.pr .in{grid-template-columns:1fr}
+  .pd .in{grid-template-columns:1fr;gap:24px}.sign{grid-auto-flow:column;justify-content:start}.sign b{width:60px;height:60px;font-size:2.2rem}
+  .blue{padding:80px 20px 40px}.blue .slot{margin-right:0}
+  .pol{width:min(250px,80%)}
+  .pa .mast{display:none}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.disc,.track{animation:none}.slot,.btn{transition:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <g id="sea">
+    <rect width="1440" height="900" fill="#0B7C86"/>
+    <path d="M0 260C240 160 420 360 720 250S1200 140 1440 260V900H0Z" fill="#12999F"/>
+    <path d="M0 430C260 330 460 520 760 410S1200 330 1440 440V900H0Z" fill="#1A82AB"/>
+    <path d="M0 610C240 520 480 700 780 600S1220 520 1440 630V900H0Z" fill="#0F6A9C"/>
+    <g fill="none" stroke="#FBF1DC" stroke-width="7" stroke-linecap="round" stroke-dasharray="110 40 30 80" opacity=".85">
+      <path d="M0 260C240 160 420 360 720 250S1200 140 1440 260"/><path d="M0 430C260 330 460 520 760 410S1200 330 1440 440"/><path d="M0 610C240 520 480 700 780 600S1220 520 1440 630"/>
+    </g>
+  </g>
+</defs></svg>
+
+<header class="top">
+  <a class="logo" href="#top">Nyla Blitz</a>
+  <nav aria-label="Main"><a class="hide-sm" href="#top">Home</a><a href="#work">Portfolio</a><a class="hide-sm" href="#about">About</a><a href="#resume">Resume</a><a href="#contact">Contact</a></nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <svg class="sea" viewBox="0 0 1440 900" preserveAspectRatio="none" aria-hidden="true"><use href="#sea"/></svg>
+    <div class="disc" aria-hidden="true"></div>
+    <p class="edition" aria-hidden="true">Portfolio, Edition 11.26</p>
+    <span class="vm vr" aria-hidden="true">UX/UI design portfolio</span>
+    <span class="vm vb" aria-hidden="true">Nyla Blitz 2026</span>
+    <h1><span class="l1">Artistic</span><span class="l2">Vision,</span><span class="l3">Captured Perfectly</span></h1>
+    <div class="nw note-hero"><div class="note">
+      <p>Nyla Blitz is a digital design student specializing in human-centered prototyping and content creation, with hands-on experience creating assistive technology solutions adopted by real users. Skilled in Figma, Adobe Creative Suite, and CAD tools, with a track record of leading interdisciplinary creative and technical teams.</p>
+      <a class="btn" href="#work">View portfolio</a>
+    </div></div>
+  </section>
+
+  <div class="ticker" aria-hidden="true"><div class="track">
+    <span>Interviews ✺ Sketches ✺ Wireframes ✺ Prototypes ✺ User feedback ✺ Interviews ✺ Sketches ✺ Wireframes ✺ Prototypes ✺ User feedback ✺</span>
+    <span>Interviews ✺ Sketches ✺ Wireframes ✺ Prototypes ✺ User feedback ✺ Interviews ✺ Sketches ✺ Wireframes ✺ Prototypes ✺ User feedback ✺</span>
+  </div></div>
+
+  <h2 class="sr" id="work">Portfolio</h2>
+
+  <article class="poster pa" id="collab"><div class="in">
+    <p class="mast">Case study</p>
+    <h3><span class="big">Connecting</span><span class="scr">Creatives</span></h3>
+    <div class="row">
+      <div class="blue"><figure class="slot"><span>Add your hi-fi prototype screens</span></figure></div>
+      <div class="nw" style="--rot:1.5deg"><div class="note">
+        <p>A website that helps college students find collaborators for creative projects. I took it from sketches through three prototype stages, testing each one with user interviews.</p>
+        <p class="tags">UX research, wireframing, prototyping, Figma</p>
+        <a class="link" href="case-collab.html">View case study</a>
+      </div></div>
+    </div>
+  </div></article>
+
+  <article class="poster pb" id="grip"><div class="in">
+    <h3 class="dbl" aria-label="Laptop Grip"><span class="base" aria-hidden="true">Laptop<br>Grip</span><span class="over" aria-hidden="true">Laptop<br>Grip</span></h3>
+    <div class="row">
+      <figure class="slot" style="--rot:-3deg"><span>Add photos of the finished grip</span></figure>
+      <div class="nw"><div class="note">
+        <p>Designed for a user with limited hand mobility. I checked in with them at every stage, from first sketches to the finished product.</p>
+        <p class="tags">Accessibility, physical prototyping, Fusion 360</p>
+        <a class="link" href="case-grip.html">View case study</a>
+      </div></div>
+    </div>
+  </div></article>
+
+  <article class="poster pc" id="roommates">
+    <svg class="sea" viewBox="0 0 1440 900" preserveAspectRatio="none" aria-hidden="true"><use href="#sea"/></svg>
+    <span class="vm vr" aria-hidden="true">Shared expenses, daily tasks</span><span class="vm vb" aria-hidden="true">Hackathon build</span>
+    <div class="in">
+      <h3>Roommate<br>Tracker</h3>
+      <div class="row">
+        <div class="nw" style="--rot:-1deg"><div class="note">
+          <p>A hackathon website that tracks roommates’ shared expenses and daily tasks, built with a team and presented to the judges.</p>
+          <p class="tags">Web design, teamwork</p>
+          <a class="link" href="case-roommates.html">View case study</a>
+        </div></div>
+        <figure class="slot"><span>Add a screenshot of the site</span></figure>
+      </div>
+    </div>
+  </article>
+
+  <article class="poster pd" id="showcase"><div class="in">
+    <div class="sign" aria-hidden="true"><b>S</b><b>H</b><b>O</b><b>W</b></div>
+    <div>
+      <h3>Computer Science Showcase</h3>
+      <div class="row">
+        <figure class="slot" style="--rot:-2deg"><span>Add logos, ads, and site screenshots</span></figure>
+        <div class="nw"><div class="note">
+          <p>The logo, ads, website, and Instagram for an event I created in high school to show off student computer science projects.</p>
+          <p class="tags">Branding, logo design, web design, social media</p>
+          <a class="link" href="case-showcase.html">View case study</a>
+        </div></div>
+      </div>
+    </div>
+  </div></article>
+
+  <article class="poster pe" id="marketing"><div class="in">
+    <h3>Marketing<br>Materials</h3>
+    <div class="polys">
+      <figure class="pol" style="--r:-6deg"><div class="ph">Add a flyer</div><figcaption>flyers</figcaption></figure>
+      <figure class="pol" style="--r:2deg;margin-top:34px"><div class="ph">Add the 16x19 ad</div><figcaption style="color:var(--verm)">16x19 ad</figcaption></figure>
+      <figure class="pol" style="--r:7deg"><div class="ph">Add the album cover</div><figcaption>album cover</figcaption></figure>
+    </div>
+    <div class="nw" style="--rot:1deg"><div class="note">
+      <p>Flyers, a 16x19 ad, and an album cover mocked up for a design class, exploring layout, type, and color across formats.</p>
+      <a class="link" href="case-marketing.html">View case study</a>
+    </div></div>
+  </div></article>
+
+  <article class="poster pf" id="game"><div class="in">
+    <div class="dial" aria-hidden="true"></div>
+    <div>
+      <h3>Unity<br>Game</h3>
+      <p class="sub">From graybox to itch.io</p>
+      <div class="nw" style="--rot:1deg"><div class="note">
+        <p>Built from a rough graybox level to a published release, with custom Blender models. You can still download and play it on itch.io.</p>
+        <p class="tags">Game design, Unity, Blender</p>
+        <a class="link" href="case-game.html">View case study</a>
+      </div></div>
+    </div>
+  </div></article>
+
+  <section class="poster pg2" id="about"><div class="in">
+    <h2>About</h2>
+    <div class="abt">
+      <div>
+        <p>I like making things all the way through: talking to users, sketching ideas, building prototypes, and shipping the result.</p>
+        <p>My projects range from websites to a physical product to a game. What connects them is asking people what they need and changing the design when they tell me.</p>
+      </div>
+      <div class="scraps">
+        <div class="scrap"><b>Research</b>User interviews, gathering and acting on feedback</div>
+        <div class="scrap"><b>Design</b>Sketching, wireframes, prototypes, branding, layout</div>
+        <div class="scrap"><b>Tools</b>Figma, Adobe Creative Suite, CAD (Fusion 360), Unity, Blender</div>
+        <div class="scrap"><b>Build</b>Websites, a hackathon app, a published game</div>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="poster pr" id="resume"><div class="in">
+    <div>
+      <h2>Resume</h2>
+      <p>My experience, education, and skills on one page.</p>
+      <!-- Save your resume as resume.pdf in the same folder as index.html so this button works -->
+      <a class="btn" href="resume.pdf" download>Download resume (PDF)</a>
+    </div>
+    <!-- Placeholder page. To show a real preview, replace this div with <img src="resume-preview.webp" alt="Preview of my resume"> -->
+    <div class="sheet" aria-hidden="true">
+      <p class="nm">Nyla Blitz</p><i style="width:55%"></i>
+      <b>Education</b><i></i><i style="width:80%"></i>
+      <b>Experience</b><i></i><i></i><i style="width:70%"></i><i></i><i style="width:60%"></i>
+      <b>Skills</b><i></i><i style="width:75%"></i>
+    </div>
+  </div></section>
+
+  <section class="poster pg" id="contact">
+    <svg class="sea" viewBox="0 0 1440 900" preserveAspectRatio="none" aria-hidden="true"><use href="#sea"/></svg>
+    <div class="in contact">
+      <div>
+        <h2>Get in <em>Touch</em></h2>
+        <p class="lead">Feel free to reach out about internships, projects, or collaborations.</p>
+      </div>
+      <div class="nw" style="--rot:1deg"><div class="note">
+        <!-- Replace the action with your own Formspree (or similar) form URL so messages reach your inbox -->
+        <form action="https://formspree.io/f/your-form-id" method="post">
+          <div class="row2">
+            <div><label for="fn">First name *</label><input id="fn" name="first_name" required autocomplete="given-name"></div>
+            <div><label for="ln">Last name *</label><input id="ln" name="last_name" required autocomplete="family-name"></div>
+          </div>
+          <label for="em">Email *</label>
+          <input id="em" name="email" type="email" required autocomplete="email">
+          <label for="msg">Message</label>
+          <textarea id="msg" name="message" rows="3"></textarea>
+          <button class="btn" type="submit">Reach Out</button>
+        </form>
+      </div></div>
+    </div>
+  </section>
+</main>
+<footer>© 2026 Nyla Blitz</footer>
+</body>
+</html>
