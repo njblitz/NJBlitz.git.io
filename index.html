@@ -108,6 +108,18 @@ h1 span{display:block}
 .polys{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;margin:52px 0 40px}
 .pol{margin:0;background:#fff;padding:14px 14px 0;width:min(260px,42%);box-shadow:0 22px 28px -14px rgba(0,0,0,.5);transform:rotate(var(--r))}
 .ph{aspect-ratio:4/5;background:#26201A radial-gradient(rgba(255,255,255,.12) 1.2px,transparent 1.7px) 0 0/10px 10px;display:flex;align-items:flex-end;padding:12px;color:#d9d1c1;font-size:.8rem;line-height:1.3}
+.ph{
+  overflow:hidden;
+  position:relative;
+}
+
+.ph img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
 .pol figcaption{font:400 1.9rem/1.1 var(--mark);padding:12px 0 14px;text-align:center}
 .pe .nw{max-width:520px;margin:0 auto}
 
